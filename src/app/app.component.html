@@ -10,10 +10,10 @@
   </li>
 </ul>
 
-<div *ngIf="selectedContact">
-<h2>{{selectedContact.name}}</h2>
-<input type="text" [(ngModel)]="selectedContact.name">
-</div>
+<contact-detail
+  *ngIf="selectedContact"
+  [contact]="selectedContact">
+</contact-detail>
 
 <h2>New contact</h2>
 <form (submit)="addContact()">
